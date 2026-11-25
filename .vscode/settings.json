@@ -1,0 +1,18 @@
+{
+    "editor.tokenColorCustomizations": {
+        "comments": "#9ECB8F"
+    },
+    "python.analysis.autoTranslateDocstrings": true,
+    "python.analysis.supportRestructuredText": true,
+    "github.copilot.chat.localeOverride": "ko",
+    "editor.inlineSuggest.enabled": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "[python]": {
+        "editor.autoIndent": "full"
+    }
+}
