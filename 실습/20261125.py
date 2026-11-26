@@ -190,8 +190,15 @@ for name, values in (("조용한 쪽", flat), ("출렁이는 쪽", wild)):
     print(name, "평균:", avg, "흔들림:", round(spread, 2))
 
 # TODO ② 1존 온도의 가장 먼 거리와 흔들림(spread)을 찍으세요
-# TODO ③ 흔들림보다 멀리 떨어진 줄이 몇 줄인지 찍으세요
+avg = sum(z1) / len(z1)
+gaps = [abs(value - avg) for value in z1]
+spread = sum(gaps) / len(gaps)
+print(
+    "소입로온도1존", "가장 먼 거리:", round(max(gaps), 2), "흔들림:", round(spread, 2)
+)
 
+# TODO ③ 흔들림보다 멀리 떨어진 줄이 몇 줄인지 찍으세요
+print("줄수:", sum(1 for g in gaps if g > spread))
 
 # =====================================================================
 # 실습 4 — 함수로 만들어 라인별로 비교합니다
@@ -238,10 +245,32 @@ for name, values in (("조용한 쪽", flat), ("출렁이는 쪽", wild)):
 print("=" * 60)
 print("[실습 4] 함수로 만들어 라인별로 비교합니다")
 
+
 # TODO ① stat() 함수를 만들고 1존 온도 전체로 찍으세요
+def stat(values):
+    if not values:
+        raise ValueError("stat() requires at least one value")
+    avg = sum(values) / len(values)
+    return {
+        "개수": len(values),
+        "평균": round(avg, 2),
+        "최대": max(values),
+        "최소": min(values),
+        "범위": max(values) - min(values),
+        "흔들림": round(sum(abs(v - avg) for v in values) / len(values), 2),
+    }
+
+
+s = stat(z1)
+print("전체 평균", s["평균"], "/ 흔들림", s["흔들림"])
+
 # TODO ② 주간·야간으로 나눠 각각 찍으세요
+for line in ("주간", "야간"):
+len([row for row in rows if row[6] == "주간"])
+print()
 # TODO ③ 줄 수 검산과, 이름을 잘못 적었을 때의 줄 수를 찍으세요
 # TODO ④ result 정상·이상으로도 나눠 찍으세요
+
 
 
 # =====================================================================

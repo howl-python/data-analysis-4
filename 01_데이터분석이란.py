@@ -521,6 +521,3 @@ EDA:    그래프와 통계로 데이터를 눈으로 이해하기
 EDA : (Exploratory Data Analysis )  탐색적 데이터 분석
     - 모델을 만들기 전에 그래프와 통계 데이터를 "눈으로 이해하는 단계.
 """
-
-import pandas as pd
-import numpy as np

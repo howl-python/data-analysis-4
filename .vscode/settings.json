@@ -3,6 +3,7 @@
         "comments": "#9ECB8F"
     },
     "python.analysis.autoTranslateDocstrings": true,
+    "python.analysis.aiHoverSummaries": true,
     "python.analysis.supportRestructuredText": true,
     "github.copilot.chat.localeOverride": "ko",
     "editor.inlineSuggest.enabled": true,
